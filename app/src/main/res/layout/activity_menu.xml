@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ListHome" />
+                android:text="枚举家庭" />
 
             <Button
                 android:id="@+id/NewHome"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="NewHome" />
+                android:text="新建家庭" />
 
             <Button
                 android:id="@+id/DeleteHome"
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="DeleteHomes" />
+                android:text="删除所有家庭" />
         </LinearLayout>
 
         <Button
@@ -46,14 +46,14 @@
             android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HomeNetEz" />
+            android:text="设备配网" />
 
         <Button
             android:id="@+id/HomeDevice"
             android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HomeDevice" />
+            android:text="设备控制" />
 
         <TextView
             android:id="@+id/HomeTextView"

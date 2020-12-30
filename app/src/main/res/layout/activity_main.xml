@@ -6,28 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:text=""
-            android:id="@+id/user_input"
-            android:gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+        <LinearLayout
+            android:id="@+id/user_input_LinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="user"
-            android:inputType="textPassword"
             android:layout_centerVertical="true"
-            android:textSize="20sp"
-            android:digits="0123456789"
-            />
-        <EditText
-            android:text=""
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名：" />
+
+            <EditText
+                android:id="@+id/user_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="user"
+                android:inputType="textPassword"
+                android:text="188"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/password_input_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_input_LinearLayout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密    码：" />
+
+            <EditText
+            android:text="188"
             android:layout_marginTop="20dp"
             android:id="@+id/password_input"
             android:gravity="center"
@@ -37,9 +61,11 @@
             android:layout_height="wrap_content"
             android:hint="password"
             android:inputType="textPassword"
-            android:layout_below="@id/user_input"
+
             android:textSize="20sp"
             android:password="true"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btn_login"
             android:textAllCaps="false"
@@ -47,8 +73,8 @@
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="login"
-            android:layout_below="@id/password_input"
+            android:text="登录"
+            android:layout_below="@id/password_input_LinearLayout"
             android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>

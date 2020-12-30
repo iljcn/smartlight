@@ -29,7 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_login;//登录按钮
-    private String uerName,password,spPsw;//获取的用户名，密码，加密密码
+    private String uerName,password;//获取的用户名，密码，加密密码
     private EditText user_input,password_input;//编辑框
 
 
@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        btn_login=findViewById(R.id.btn_login);
+        user_input=findViewById(R.id.user_input);
+        password_input=findViewById(R.id.password_input);
+
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         init();
 
@@ -91,9 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
 
-        btn_login=findViewById(R.id.btn_login);
-        user_input=findViewById(R.id.user_input);
-        password_input=findViewById(R.id.password_input);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +117,12 @@ public class MainActivity extends AppCompatActivity {
                     // md5Psw.equals(); 判断，输入的密码加密后，是否与保存在SharedPreferences中一致
                 }
 
+
                 TuyaHomeSdk.getUserInstance().loginWithPhonePassword("86", uerName, password, new ILoginCallback() {
                     @Override
                     public void onSuccess(User user) {
-                        Toast.makeText(MainActivity.this, "登录成功，用户名：" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "登录成功" , Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, "登录成功，用户名：" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(MainActivity.this,MenuActivity.class);
                         startActivity(intent);

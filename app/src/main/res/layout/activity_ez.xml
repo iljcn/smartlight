@@ -12,8 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/ssid_input_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="net-ssid:" />
+
+
         <EditText
-            android:text=""
+            android:text="1111"
             android:id="@+id/ssid_input"
             android:gravity="center"
             android:layout_marginLeft="15dp"
@@ -24,9 +38,25 @@
             android:inputType="textPassword"
             android:layout_centerVertical="true"
             android:textSize="20sp"
+            android:digits="0123456789"
             />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/ssid_input_LinearLayout"
+            android:id="@+id/password_input_ez_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="passwd:" />
+
         <EditText
-            android:text=""
+            android:text="1111"
             android:layout_marginTop="20dp"
             android:id="@+id/password_input_ez"
             android:gravity="center"
@@ -36,17 +66,18 @@
             android:layout_height="wrap_content"
             android:hint="password"
             android:inputType="textPassword"
-            android:layout_below="@id/ssid_input"
             android:textSize="20sp"
             android:password="true"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btn_ez"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="EZ"
-            android:layout_below="@id/password_input_ez"
+            android:text="设备配网"
+            android:layout_below="@id/password_input_ez_LinearLayout"
             android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>

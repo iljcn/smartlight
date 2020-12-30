@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--这是SeekBar的背景图-->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dip"/>
+            <solid android:color="#C9CAC5" />
+
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip"/>
+                <solid android:color="#C9CAC5" />
+            </shape>
+        </clip>
+    </item>
+    <!--这是SeekBar的进度图-->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+                <solid android:color="#0000ff"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>
