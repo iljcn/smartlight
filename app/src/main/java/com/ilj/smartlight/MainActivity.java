@@ -28,7 +28,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_login;//登录按钮
+    private Button btn_login,btn_register;//登录按钮
     private String uerName,password;//获取的用户名，密码，加密密码
     private EditText user_input,password_input;//编辑框
 
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         btn_login=findViewById(R.id.btn_login);
+        btn_register=findViewById(R.id.btn_register);
         user_input=findViewById(R.id.user_input);
         password_input=findViewById(R.id.password_input);
 
@@ -98,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
 
+        btn_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MainRegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

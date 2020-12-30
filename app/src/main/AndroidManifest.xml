@@ -34,7 +34,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup,android:supportsRtl">
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MainRegisterActivity"></activity>
+        <activity android:name=".MenuActivity" />
         <activity android:name=".DeviceActivity" />
         <activity
             android:name=".EZActivity"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainRegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -52,42 +52,70 @@
                 android:text="密    码：" />
 
             <EditText
-            android:text="188"
-            android:layout_marginTop="20dp"
-            android:id="@+id/password_input"
-            android:gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="password"
-            android:inputType="textPassword"
+                android:text="188"
+                android:layout_marginTop="20dp"
+                android:id="@+id/password_input"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password"
+                android:inputType="textPassword"
 
-            android:textSize="20sp"
-            android:password="true"/>
+                android:textSize="20sp"
+                android:password="true"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_login"
-            android:textAllCaps="false"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
+        <LinearLayout
+            android:id="@+id/validatecode_input_LinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="登录"
             android:layout_below="@id/password_input_LinearLayout"
-            android:layout_centerHorizontal="true"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码：" />
+
+            <EditText
+                android:id="@+id/validatecode_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:hint="validate code"
+                android:password="true"
+
+                android:text="888888"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_validatecode_get"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_validatecode_register"
             android:textAllCaps="false"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="注册"
-            android:layout_below="@id/btn_login"
+            android:layout_below="@id/validatecode_input_LinearLayout"
             android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
